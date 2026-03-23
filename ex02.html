@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Miguel</title>
+    <script>
+        function enviar() {
+            const input = document.querySelector("#idinput")
+            const texto = document.querySelector("#idparag")
+            const valor = input.value
+
+            texto.innerHTML = valor + '<br>' + texto.innerHTML
+            input.value = ''
+        }
+    </script>
 </head>
 <body>
     <h1>Digite algo</h1>
     <input type="text" id="idinput">
-    <button id="idbutton">Copiar em baixo</button>
-    <p id="idp"></p>
-    <script>
-        const input = document.querySelector("#idinput")
-        
-        const texto = document.querySelector("#idp")
-
-        document.querySelector("#idbutton").onclick = function () {
-            const valor = input.value
-            texto.textContent = valor
-            input.value = ''
-        }
-    </script>
+    <button id="idbutton" onclick= "enviar()">Copiar em baixo</button>
+    <p id="idparag"></p>
 </body>
 </html>
