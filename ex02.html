@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Miguel</title>
+</head>
+<body>
+    <h1>Digite algo</h1>
+    <input type="text" id="idinput">
+    <button id="idbutton">Copiar em baixo</button>
+    <p id="idp"></p>
+    <script>
+        const input = document.querySelector("#idinput")
+        
+        const texto = document.querySelector("#idp")
+
+        document.querySelector("#idbutton").onclick = function () {
+            const valor = input.value
+            texto.textContent = valor
+            input.value = ''
+        }
+    </script>
+</body>
+</html>
